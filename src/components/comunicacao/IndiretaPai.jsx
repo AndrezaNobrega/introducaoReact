@@ -1,16 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import IndiretaFilho from './IndiretaFilho'
 
-export default props =>{
-    let nome = '?'
-    let idade = 0
-    let nerd = false
+//estado dentro do componente
 
-    // nome idade nerd
-    function forncerInformacoes(nomeParam, idadeParam, nerdParam){
-        nome = nomeParam
-        idade = idadeParam
-        nerd = nerdParam
+export default props =>{
+    const[nome, setNome] = useState('?')
+    const[idade, setIdade] = useState(0)   
+    const[nerd, setNerd] = useState(false)    
+
+    // alteramos os dados
+    //a interface irá refletir essa mudança
+    function forncerInformacoes(nome, idade, nerd){
+        setNome(nome)
+        setIdade(idade)
+        setNerd(nerd)
     }
 
     return(
