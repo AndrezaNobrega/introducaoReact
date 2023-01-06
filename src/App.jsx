@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 
 //importações dos componentes
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import Card from "./components/layout/Card";
@@ -33,11 +36,20 @@ export default () => (
 
     <div className="Cards">
     
+    <Card titulo="#09 - Comunicação direta" color="#bb3e03">
+      <DiretaPai/>
+      </Card>
+
+    <Card titulo="#08 - Rendererização condicional" color="#ee9b00">
+        <ParOuImpar numero={1}/>
+        <UsuarioInfo/>
+      </Card>
+    
     <Card titulo="#07 - Desafio tabela produtos" color="#0a9396">
         <TabelaProdutos></TabelaProdutos>
       </Card>
 
-    <Card titulo="#06 - Repetição" color="#ee9b00">
+    <Card titulo="#06 - Repetição" color="#ca6702">
         <ListaAlunos></ListaAlunos>
       </Card>
 
